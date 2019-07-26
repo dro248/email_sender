@@ -37,7 +37,6 @@ class EmailSender:
         :param attachments: a list of files to be attached to the email
         :return:
         """
-        print(f"ATTACHMENT FILE: {attachments}")
         if isinstance(attachments, str):
             # attachment is a string (i.e. filename), not a list of filenames --> put it in a list
             attachments = [x.strip() for x in attachments.split(',')]
