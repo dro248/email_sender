@@ -11,9 +11,5 @@ setup(name='email_sender',
       author_email='david.ostler001@gmail.com',
       license=None,
       packages=find_packages(exclude=['tests', '.idea', '.cache', '__pycache__']),
-      install_requires=[
-            'smtplib',
-            'email',
-      ],
       include_package_data=True,
       zip_safe=False)
