@@ -43,7 +43,7 @@ class EmailSender:
             print(attachments)
 
         if not isinstance(recipient, str):
-            raise ValueError(f'recipient must be a string. Received: {type(recipient)}')
+            raise ValueError(f"recipient must be a string. Received: {type(recipient)}")
 
         # Create Email
         message = MIMEMultipart("alternative")
