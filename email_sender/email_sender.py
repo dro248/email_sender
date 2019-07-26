@@ -74,14 +74,8 @@ class EmailSender:
         # Send the email
         server = smtplib.SMTP(self.smtp_relay, self.smtp_port)
         server.connect(self.smtp_relay, self.smtp_port)
-        #server.ehlo()
-        # server.starttls()
+        server.ehlo()
+        server.starttls()
         server.ehlo()
         server.sendmail(self.sender_email, [recipient] + cc_recipients + bcc_recipients, message.as_string())
         server.quit()
-
-
-if __name__ == "__main__":
-    EmailSender(sender_email=os.environ.get('BEAT_SENDER_EMAIL'),
-                smtp_relay=os.environ.get('BEAT_SMTP_RELAY')) \
-        .send_simple_email(recipient='david.ostler@advancedmd.com', subject='HOORAY!!')
