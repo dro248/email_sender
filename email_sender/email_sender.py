@@ -13,11 +13,13 @@ class EmailSender:
 
     def __init__(self,
                  sender_email=None,
-                 smtp_relay=None):
+                 smtp_relay=None,
+                 smtp_port=25):
 
         # sender email
         self.sender_email = sender_email
         self.smtp_relay = smtp_relay
+        self.smtp_port = smtp_port
 
     def send_simple_email(self,
                           recipient: str = '',
@@ -70,8 +72,8 @@ class EmailSender:
             message.attach(part)
 
         # Send the email
-        server = smtplib.SMTP(self.smtp_relay, 25)
-        server.connect(self.smtp_relay, 25)
+        server = smtplib.SMTP(self.smtp_relay, self.smtp_port)
+        server.connect(self.smtp_relay, self.smtp_port)
         server.ehlo()
         server.starttls()
         server.ehlo()
