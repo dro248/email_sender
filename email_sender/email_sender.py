@@ -75,7 +75,7 @@ class EmailSender:
         server = smtplib.SMTP(self.smtp_relay, self.smtp_port)
         server.connect(self.smtp_relay, self.smtp_port)
         #server.ehlo()
-        server.starttls()
+        # server.starttls()
         server.ehlo()
         server.sendmail(self.sender_email, [recipient] + cc_recipients + bcc_recipients, message.as_string())
         server.quit()
