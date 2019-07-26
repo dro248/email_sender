@@ -1,7 +1,4 @@
 from setuptools import setup, find_packages
-import os
-
-# os.system('pip install git+https://github.com/dro248/email_sender.git@master#egg=email_sender')
 
 setup(name='email_sender',
       version='0.1.0',
