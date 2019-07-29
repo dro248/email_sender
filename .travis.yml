@@ -3,4 +3,4 @@ python:
 - "3.6"
 
 script:
-- pytest
+- python3 -m pytest
