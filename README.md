@@ -1,4 +1,4 @@
-# email_sender
+# email_sender  [![Build Status](https://travis-ci.com/dro248/email_sender.svg?branch=master)](https://travis-ci.com/dro248/email_sender)
 
 ## Install
 ```bash
