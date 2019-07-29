@@ -5,5 +5,5 @@ def test_pass():
     assert 1 != 2
 
 
-def xtest_fail():
+def test_fail():
     assert False is True
